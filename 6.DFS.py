@@ -4,7 +4,7 @@
 
 # sys.stdin = open("input.txt", "rt")
 
-############1번 stack으로 이루어진 재귀함수 #############
+############ 1번 stack으로 이루어진 재귀함수 #############
 # def DFS(x):
 #     if x > 0:
 #         DFS(x - 1)
@@ -48,7 +48,7 @@
 #     DFS(1)
 
 # num, m = map(int, input().split())
-##num을 리스트로 만든다.
+# num을 리스트로 만든다.
 # num = list(map(int, str(num)))  # str로 바꾸어야 한개씩 접근이 가능하다
 # stack = []
 # for x in num:
@@ -80,7 +80,7 @@
 # def DFS(v):
 #     if v == n + 1:
 #         for i in range(1, n + 1):
-#             if ch[i] == 1:
+#             if ch[i] == 1: //방문한 곳이라면
 #                 print(i, end=" ")
 #         print()
 #     else:
@@ -96,26 +96,25 @@
 #     DFS(1)
 
 ############ 4번 합이 같은 부분집합  ############
+# sum ==total -sum
+# L을 깊이와 인덱스로 사용한다.
+def DFS(L, sum):
+    if L == n:  # 0번 인덱스 부터니까
+        if sum == (total-sum):
+            print("YES")
+            sys.exit(0)  # 프로그램을 아예종료시킨다.
+    else:
+        DFS(L+1, sum+a[L])  # o
+        DFS(L+1, sum)  # x
 
 
-# def DFS(L, sum):
-#     if sum > total // 2:
-#         return
-#     if L == n:
-#         if sum == (total - sum):
-#             print("YES")
-#             sys.exit(0)  ## 종료한다 .
-#     else:
-#         DFS(L + 1, sum + a[L])
-#         DFS(L + 1, sum)
-
-
-# if __name__ == "__main__":
-#     n = int(input())
-#     a = list(map(int, input().split()))
-#     total = sum(a)
-#     DFS(0, 0)
-#     print("NO")
+if __name__ == "__main__":
+    n = int(input())
+    a = list(map(int, input().split()))
+    total = sum(a)
+    DFS(0, 0)
+    print("NO")
+#
 ############ 5번 바둑이 승차 ############
 # def DFS(L, sum, tsum):  ####tsum -> 판단을 한 무게
 #     global result
@@ -284,7 +283,7 @@
 #     print(cnt)
 
 ############# 12번 라이브러리를 이용한 순열(수열 추측하기 ) #######
-## 라이브러리를 막아놓는 경우가 있으니 기본이 중요하다.특정 조건일때는 라이브러리 안됨
+# 라이브러리를 막아놓는 경우가 있으니 기본이 중요하다.특정 조건일때는 라이브러리 안됨
 
 
 # n, f = map(int, input().split())

@@ -288,7 +288,7 @@
 # #     ##지금은 문자기 때문에 정수화 시켜야함
 # #     a, b, c = map(int, tmp)
 # #     ##변수 하나에 기준을 줘야 한다.
-# #     if a == b and b == c:
+# #     if a == b and b == c:ㅁ
 # #         money = 10000 + (a * 1000)
 # #     elif a == b or a == c:
 # #         money = 1000 + (a * 100)
