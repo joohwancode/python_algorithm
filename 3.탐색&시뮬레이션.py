@@ -1,8 +1,8 @@
 # ## 1번 회문 문자열 검사
 
-import sys
+# import sys
 
-sys.stdin = open("input.txt", "rt")
+# sys.stdin = open("input.txt", "rt")
 
 # # # n = int(input())
 

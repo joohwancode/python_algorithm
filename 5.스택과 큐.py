@@ -216,11 +216,11 @@
 # else:
 #     print("YES")
 ####10번최소힙  ###################################################################################################
-import sys
-import heapq as hq
+# import sys
+# import heapq as hq
 
-sys.stdin = open("input.txt", "rt")
-# ##힙자료구조 처럼 움직임
+# sys.stdin = open("input.txt", "rt")
+# # ##힙자료구조 처럼 움직임
 # a = []
 # while True:
 #     n = int(input())
